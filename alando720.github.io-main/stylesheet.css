@@ -1,0 +1,83 @@
+/*
+Program: Patient registration form 
+Author: Alan Do
+Date: 2025-02-14
+Date last updated: 2/23/2026
+Ver: 1.0
+Description: Homework JavaScript
+*/
+
+header {
+  width: 100%;
+  background-color: cadetblue;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: powderblue;
+  height: 100%;
+  margin: 0;
+  min-height: 100vh;
+}
+
+form {
+  flex-grow: 1;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: "Monaco", Monospace;
+  font-weight: normal;
+  flex-grow: 1;
+}
+
+main {
+  text-align: center;
+  font-family: "Monaco", monospace;
+  font-weight: normal;
+  flex-grow: 1;
+}
+
+.image {
+  text-align: left;
+}
+
+.td1 {
+  text-align: right;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
+
+footer {
+  position: flex; 
+  bottom: 0;
+  width: 100%; 
+  background-color: cadetblue;
+  height: 3.0 rem;
+  margin-left: 20px;
+}
+
+#footer {
+  font-family: "Monaco", monospace;
+  font-weight: normal;
+}
+
+label {
+  text-align: right;
+  font-family: "Monaco", monospace;
+  font-weight: normal;
+}
+
+input {
+  text-align: left;
+  font-family: "Monaco", monospace;
+  font-weight: normal;
+}
+
+p {
+  text-align: left;
+  font-family: "Monaco", monospace;
+  font-weight: normal;
+}
