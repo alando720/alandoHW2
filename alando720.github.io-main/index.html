@@ -54,10 +54,13 @@ Description: Homework 1 Patient Registration Form
                  title="Patient first name"
 				 onblur="validateFirstName()"
                  placeholder="Jane"
-				 
                  />
+				 
+		     </br>
+			 <span class="error" id="firstName-error"></span>
              </td>
           </tr>
+			
           <tr>
              <td class="td1"><label for="middleinit">MI</label></td>
              <td>
@@ -67,11 +70,17 @@ Description: Homework 1 Patient Registration Form
                  id="middleinit"
                  maxlength="1"
                  required
+				 pattern="[a-zA-Z']{0,1}
                  title="Patient middle initial"
+				 onblur="validateMiddleInit()"
                  placeholder="X"
                  />
+
+			 </br>
+			 <span class="error" id="middleInit-error"></span>
              </td>
           </tr>
+			
           <tr>
              <td class="td1"><label for="lastname">Last Name</label></td>
              <td>
@@ -81,11 +90,16 @@ Description: Homework 1 Patient Registration Form
                  id="lastname"
                  maxlength="30"
                  required
+				 pattern="[a-zA-Z']{1,30}
                  title="Patient last name"
+				 onblur="validateLastName()"
                  placeholder="Doe"
                  />
+			 </br>
+			 <span class="error" id="lastName-error"></span>
              </td>
           </tr>
+			
           <tr>
              <td class="td1"><label for="dob">Date of Birth:</label></td>
              <td>
