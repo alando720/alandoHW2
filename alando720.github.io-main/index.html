@@ -50,7 +50,7 @@ Description: Homework 1 Patient Registration Form
                  id="firstname"
                  maxlength="30"
                  required
-                 title="Patient first name."
+                 title="Enter letters, apostrophes, or hyphens."
 				 pattern="[a-zA-Z']{1,30}
 				 onblur="validateFirstName()"
                  placeholder="Jane"
@@ -70,7 +70,7 @@ Description: Homework 1 Patient Registration Form
                  id="middleinit"
                  maxlength="1"
                  required
-                 title="Patient middle initial"
+                 title="Enter letters."
 				 pattern="[a-zA-Z']{0,1}
 				 onblur="validateMiddleInit()"
                  placeholder="X"
@@ -90,7 +90,7 @@ Description: Homework 1 Patient Registration Form
                  id="lastname"
                  maxlength="30"
                  required
-                 title="Patient last name"
+                 title="Enter letters, apostrophes, or hyphens."
 				 pattern="[a-zA-Z']{1,30}
 				 onblur="validateLastName()"
                  placeholder="Doe"
@@ -114,6 +114,7 @@ Description: Homework 1 Patient Registration Form
 			 <span class="error" id="dob-error"></span>
              </td>
           </tr>
+			
           <tr>
              <td class="td1"><label for="ssn">Social Security Number:</label></td>
              <td>
@@ -124,9 +125,12 @@ Description: Homework 1 Patient Registration Form
                  name="ssn"
                  id="ssn"
                  required
-                 title="Patient Social Security Number"
+                 title="Numbers only."
                  placeholder="123-45-6789"
+				 onblur="validateSSN()"
                  />
+			 </br>
+			 <span class="error" id="ssn-error"></span>
              </td>
           </tr>
           <tr>
@@ -140,7 +144,10 @@ Description: Homework 1 Patient Registration Form
                  required
                  title="Patient Address"
                  placeholder="123 Main St."
+				 onblur="validateAddress1()"
                  />
+			 </br>
+			 <span class="error" id="address1-error"></span>
              </td>
           </tr>
            <tr>
@@ -176,8 +183,8 @@ Description: Homework 1 Patient Registration Form
              <td>
                 <select>
                   <option selected disabled>Select a State</option>
-	                 <option value="AL">Alabama</option>
-	                 <option value="AK">Alaska</option>
+	                <option value="AL">Alabama</option>
+	                <option value="AK">Alaska</option>
                  	<option value="AZ">Arizona</option>
                  	<option value="AR">Arkansas</option>
                  	<option value="CA">California</option>
@@ -239,9 +246,12 @@ Description: Homework 1 Patient Registration Form
                  id="zip"
                  maxlength="5"
 				 required
-                 title="Patient Zipcode"
+                 title="Enter numbers."
                  placeholder="77023"
+				 pattern="[0-9]{5}"
                  />
+			 </br>
+			 <span class="error" id="zipcode-error"></span>
              </td>
           </tr>
           <tr>
@@ -255,7 +265,10 @@ Description: Homework 1 Patient Registration Form
 		 		 required
                  title="Patient Email Address"
                  placeholder="jane.doe@gmail.com"
+				 onblur="validateEmail()"
                  />
+			 </br>
+			 <span class="error" id="email-error"></span>
              </td>
           </tr>
 		  <tr>
@@ -269,7 +282,11 @@ Description: Homework 1 Patient Registration Form
 		 		 required
                  title="Patient Phone Number"
                  placeholder="123-456-7890"
+				 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+				 onblur="validatePhoneNum()"
                  />
+			 </br>
+			 <span class="error" id="phonenum-error"></span>
              </td>
           </tr>
           <tr>
