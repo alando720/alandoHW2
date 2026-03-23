@@ -405,11 +405,15 @@ Description: Homework 1 Patient Registration Form
                  type="text"
                  name="UID"
                  id="UID"
+				 minlength="4"
                  maxlength="20"
                  required
-                 title="Patient User ID"
-                 placeholder="Jane820"
+                 title="Username must have at least 4 characters."
+                 placeholder="Jane820"d
+				 onblur="validateUID()"
                  />
+		  	 </br>
+			 <span class="error" id="uid-error"></span>
              </td>
 		  </tr>
 		  <tr>
@@ -421,9 +425,14 @@ Description: Homework 1 Patient Registration Form
                  id="pass"
                  maxlength="30"
                  required
-                 title="Patient Password"
+                 title="Must have at least 10 characters, one number, one special character, one lowercase letter, and one uppercase letter."
                  placeholder="Req'd"
+				 onblur="validatepass()"
+				 oninput="validatepass()"
+				 onfocus="validatepass()"
                  />
+			 </br>
+			 <span class="error" id="pass-error"></span>
              </td>
 		  </tr>
 		   <tr>
@@ -435,9 +444,14 @@ Description: Homework 1 Patient Registration Form
                  id="confirm"
                  maxlength="30"
                  required
-                 title="Confirm Patient Password"
+                 title="Confirm Patient Password."
                  placeholder="Req'd"
+				 onblur="confirmpass()"
+				 oninput="confirmpass()"
+				 onfocus="confirmpass()"
                  />
+			 </br>
+			 <span class="error" id="pass-error"></span>
              </td>
 		  </tr>
 		  <tr>
