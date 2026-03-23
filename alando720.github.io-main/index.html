@@ -50,8 +50,8 @@ Description: Homework 1 Patient Registration Form
                  id="firstname"
                  maxlength="30"
                  required
+                 title="Patient first name."
 				 pattern="[a-zA-Z']{1,30}
-                 title="Patient first name"
 				 onblur="validateFirstName()"
                  placeholder="Jane"
                  />
@@ -70,8 +70,8 @@ Description: Homework 1 Patient Registration Form
                  id="middleinit"
                  maxlength="1"
                  required
-				 pattern="[a-zA-Z']{0,1}
                  title="Patient middle initial"
+				 pattern="[a-zA-Z']{0,1}
 				 onblur="validateMiddleInit()"
                  placeholder="X"
                  />
@@ -90,8 +90,8 @@ Description: Homework 1 Patient Registration Form
                  id="lastname"
                  maxlength="30"
                  required
-				 pattern="[a-zA-Z']{1,30}
                  title="Patient last name"
+				 pattern="[a-zA-Z']{1,30}
 				 onblur="validateLastName()"
                  placeholder="Doe"
                  />
@@ -107,7 +107,11 @@ Description: Homework 1 Patient Registration Form
                  type="date"
                  id="dob"
                  name="dob"
+				 onblur="validateDOB()"
+				 required
                  />
+			 </br>
+			 <span class="error" id="dob-error"></span>
              </td>
           </tr>
           <tr>
