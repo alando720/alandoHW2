@@ -50,8 +50,11 @@ Description: Homework 1 Patient Registration Form
                  id="firstname"
                  maxlength="30"
                  required
+				 pattern="[a-zA-Z']{1,30}
                  title="Patient first name"
+				 onblur="validateFirstName()"
                  placeholder="Jane"
+				 
                  />
              </td>
           </tr>
