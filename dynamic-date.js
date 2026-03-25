@@ -16,7 +16,7 @@ document.getElementById("today").innerHTML = text;
 function validateDOB() {
   let dob=document.getElementById("dob");
   let date = new Date(dob.value);
-  letmaxDate = new Date().setFullYear(new Date()-120);
+  let maxDate = new Date().setFullYear(maxDate.getFullYear() - 120);
 
   if (date > new Date()) {
       document.getElementById("dob-error").innerHTML = "Date cannot be a future date.";
@@ -83,7 +83,7 @@ function validatezip() {
 //email validation code
 function validateEmail() {
     email = document.getElementById("email").value;
-    var emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.w{2,3})+$/; //regular expression pattern for email
+    var emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; //regular expression pattern for email
 
     if (email =="") {
         document.getElementById("email-error").innerHTML = "Email cannot be empty.";
@@ -103,7 +103,7 @@ function validatePhoneNum() {
       const phoneInput = document.getElementById("phone");
       const phonenum = phoneInput.value.replace(/\D/g, ""); // takes away all characters that aren't numbers
 
-      if (phonenum.length !== 10 {
+      if (phonenum.length !== 10) {
           document.getElementById("phonenum-error").innerHTML = "Phone number cannot be blank.";
           return false;
       }
