@@ -14,62 +14,62 @@ document.getElementById("today").innerHTML = text;
 
 //dob validation code
 function validateDOB() {
-  dob=document.getELementByID("dob");
+  let dob=document.getElementById("dob");
   let date = new Date(dob.value);
   letmaxDate = new Date().setFullYear(new Date()-120);
 
   if (date > new Date()) {
-      document.getElementByID("dob-error").innerHTML = "Date cannot be a future date."
+      document.getElementById("dob-error").innerHTML = "Date cannot be a future date.";
       dob.value="";
       return false;
   } else if (date < new Date(maxDate)) {
-    document.getElementByID("dob-error").innerHTML = "Date cannot be over 120 years.
+    document.getElementById("dob-error").innerHTML = "Date cannot be over 120 years.";
     dob.value="";
     return false;
   } else {
-    document.getElementByID("dob-error").innerHTML = "";
+    document.getElementById("dob-error").innerHTML = "";
     return true;
   }
 }
 
 //ssn validation code
 function validateSSN() {
-    const ssn = document.getElementByID("ssn").value;
+    const ssn = document.getElementById("ssn").value;
   
     //regular expression for ssn pattern
     const ssnR = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
   
     if (!ssnR.test(ssn)) {
-        document.getElementByID("ssn-error").innerHTML = "Please enter a valid SSN.";
+        document.getElementById("ssn-error").innerHTML = "Please enter a valid SSN.";
         return false;
     } else {
-        document.getElementByID("ssn-error").innerHTML = "";
+        document.getElementById("ssn-error").innerHTML = "";
         return true;
     }
 }
 //address 1 validation code
 function validateAddress1() {
-    var addr1 = document.getElementByID("address1").value;
+    var addr1 = document.getElementById("address1").value;
     console.log(addr1);
     console.log(addr1.length);
 
 
     if (addr1.length < 4) {
-        document.getElementByID("address1-error").innerHTML = "Please enter an address.";
+        document.getElementById("address1-error").innerHTML = "Please enter an address.";
         return false;
     } else {
-        document.getElementByID("address1-error").innerHTML = "";
+        document.getElementById("address1-error").innerHTML = "";
         return true;
     }
 }  
 
 //zip code validation code
 function validatezip() {
-    const zipInput = document.getElementByID("zip");
+    const zipInput = document.getElementById("zip");
     let zip = zipInput.value.replace(/[^\d-]/g, "") //takes out any thing thats not a number or dash
 
   if (!zip) {
-      document.getElementByID("zipcode-error").innerHTML = "Zip code cannot be blank."
+      document.getElementById("zipcode-error").innerHTML = "Zip code cannot be blank.";
       return false;
   } 
   if (zip.length > 5){
@@ -77,22 +77,22 @@ function validatezip() {
   }
 
   zipInput.value = zip;
-  document.getElementByID("zipcode-error").innerHTML = "";
+  document.getElementById("zipcode-error").innerHTML = "";
   return true;
 }
 //email validation code
 function validateEmail() {
-    email = document.getElementByID("email").value;
+    email = document.getElementById("email").value;
     var emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.w{2,3})+$/; //regular expression pattern for email
 
     if (email =="") {
-        document.getElementByID("email-error").innerHTML = "Email cannot be empty.";
+        document.getElementById("email-error").innerHTML = "Email cannot be empty.";
         return false;
-    }  else if (!email.match(emailR) {
-          document.getElementByID("email-error").innerHTMl = "Enter a valid email."
+    }  else if (!email.match(emailR)) {
+          document.getElementById("email-error").innerHTML = "Enter a valid email.";
           return false;
     }  else {
-          document.getElementByID("email-erorr").innerHTML = "";
+          document.getElementById("email-error").innerHTML = "";
           return true;
     }
 }
