@@ -101,13 +101,13 @@ function validateEmail() {
 
 function validatePhoneNum() {
       const phoneInput = document.getElementById("phone");
-      const phone = phoneInput.value.replace(/\D/g, ""); // takes away all characters that aren't numbers
+      const phonenum = phoneInput.value.replace(/\D/g, ""); // takes away all characters that aren't numbers
 
-      if (phone.length !== 10 {
+      if (phonenum.length !== 10 {
           document.getElementById("phonenum-error").innerHTML = "Phone number cannot be blank.";
           return false;
       }
-      const formattedPhone = phone.slice(0,3) + "-" + phone.slice(3,6) + "-" + phone.slice(6);
+      const formattedPhone = phonenum.slice(0,3) + "-" + phonenum.slice(3,6) + "-" + phonenum.slice(6);
       phoneInput.value = formattedPhone;
       document.getElementById("phonenum-error").innerHTML = ""
       return true;
