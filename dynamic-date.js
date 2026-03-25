@@ -113,7 +113,29 @@ function validatePhoneNum() {
       return true;
 }
 
+//user name validation code
+function validateUID() {
+    uid = document.getElementById("UID").value;
+    uid = uid.toLowerCase();
+    document.getElementById("UID").value = uid;
 
+    if (uid.length == 0) {
+        document.getElementById("UID").innerHTML = "User ID cannot be blank.";
+        return false;
+    }
+    //verifies that username is only letters, numbers, underscores, or periods.
+    let regex = /^[a-zA-Z0-9_.]+$/;
+    if (!regex.test(UID)) {
+        document.getElementById("uid-error").innerHTML = "User ID can only contain letters, numbers, underscores, and periods.";
+        return false;
+    }  else if (uid.length > 30) {
+          document.getElementById("uid-error").innerHTML = "User ID cannot be longer than 30 characters.
+          return false;
+    }  else {
+          document.getElementById("uid-error").innerHTML = "";
+          return true;
+    }
+}
 
 
 
