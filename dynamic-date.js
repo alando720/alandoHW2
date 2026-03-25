@@ -100,7 +100,7 @@ function validateEmail() {
 // phone number validation code 
 
 function validatePhoneNum() {
-      const phoneInput = document.getElementById("phonenum-error");
+      const phoneInput = document.getElementById("phone");
       const phone = phoneInput.value.replace(/\D/g, ""); // takes away all characters that aren't numbers
 
       if (phone.length !== 10 {
