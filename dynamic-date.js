@@ -157,6 +157,7 @@ function validatepass() {
     //verifies upper case letters
     if (!pass.match(/[A-Z]/)) {
         errorMessage.push("Enter at least one upper case letter.");
+    }
     //verifies for numbers.
     if (!pass.match(/[0-9]/)) {
         errorMessage.push("Enter at least one number.");
