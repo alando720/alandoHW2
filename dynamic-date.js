@@ -103,7 +103,7 @@ function validatePhoneNum() {
       const phoneInput = document.getElementById("phone");
       const phonenum = phoneInput.value.replace(/\D/g, ""); // takes away all characters that aren't numbers
 
-      if (phonenum.length !== 10) {
+      if (phonenum.length == 0) {
           document.getElementById("phonenum-error").innerHTML = "Phone number cannot be blank.";
           return false;
       }
