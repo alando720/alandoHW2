@@ -110,16 +110,16 @@ table.output,
 tr.output,
 td.output {
   width: 500px;
-  background-color: powderblue;
+  background-color: cadetblue;
   padding: 10px;
   border-spacing: 5px;
   border-radius: 25px;
-  color: grey;
+  color: black;
 }
 
 td.output {
   width: 500px;
-  background-color: powderblue;
+  background-color: cadetblue;
   padding: 10px:
   border-spacing: 5px;
 }
