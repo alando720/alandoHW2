@@ -160,6 +160,7 @@ function validatepass() {
     //verifies for numbers.
     if (!pass.match(/[0-9]/)) {
         errorMessage.push("Enter at least one number.");
+    }
     //verifies for special characters
     if (!pass.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
         errorMessage.push("Enter at least one special character.");
