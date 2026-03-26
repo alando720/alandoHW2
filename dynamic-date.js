@@ -197,7 +197,7 @@ function reviewInput() {
     var formoutput;
     var i;
     formoutput = "<table class='output'><th colspan = '3'>Your Information:</th>";
-    for (i = 0; i < formcontent.length; i++;) {
+    for (i = 0; i < formcontent.length; i++) {
         if (formcontent.elements[i].value != "") {
             datatype = formcontent.elements[i].type;
             switch (datatype) {
