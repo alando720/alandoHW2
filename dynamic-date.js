@@ -107,7 +107,7 @@ function validatePhoneNum() {
           document.getElementById("phonenum-error").innerHTML = "Phone number cannot be blank.";
           return false;
       }
-      const formattedPhone = phonenum.slice(0,3) + "-" + phonenum.slice(3,6) + "-" + phonenum.slice(6);
+      const formattedPhone = phonenum.slice(0,3) + "-" + phonenum.slice(3,6) + "-" + phonenum.slice(6,10);
       phoneInput.value = formattedPhone;
       document.getElementById("phonenum-error").innerHTML = ""
       return true;
