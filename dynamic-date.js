@@ -192,7 +192,7 @@ function confirmpass() {
 }
 
 //displays user's input
-function reviewInput() {
+function showInput() {
     var formcontent = document.getElementById("signup");
     var formoutput;
     var i;
