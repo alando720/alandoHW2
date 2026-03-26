@@ -199,7 +199,7 @@ function showInput() {
     formoutput = "<table class='output'><th colspan = '3'>Your Information:</th>";
     for (i = 0; i < formcontent.length; i++) {
         if (formcontent.elements[i].value != "") {
-            datatype = formcontent.elements[i].type;
+            let datatype = formcontent.elements[i].type;
             switch (datatype) {
               case "checkbox":
                 if (formcontent.elements[i].checked) {
@@ -209,8 +209,8 @@ function showInput() {
                 break;
               case "radio":
                 if (formcontent.elements[i].checked) {
-                    formoutput = formoutput + "<tr> <td align='right'" + formcontent.elements[i].name + "</td>";
-                    formoutput = "<td class='outputdata'>" + formcontent.elements[i].value + "</td></tr>";
+                    formoutput = formoutput + "<tr> <td align='right'>" + formcontent.elements[i].name + "</td>";
+                    formoutput = formoutput + "<td class='outputdata'>" + formcontent.elements[i].value + "</td></tr>";
                 }
                 break;
               case "button":
