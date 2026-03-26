@@ -81,3 +81,59 @@ p {
   font-family: "Monaco", monospace;
   font-weight: normal;
 }
+
+.error {
+  color: red;
+  font-size: 12px;
+  font-family: "Monaco, monospace;
+  font-weight: normal;
+}
+
+.password-message {
+  text-align: right;
+  font-family: "Monaco", monospace;
+  font-weight: normal;
+  position: relative;
+  left: 100px;
+  background: transparent;
+  padding: 10px;
+  border-spacing: 5px;
+  border-radius: 25px;
+  color: red;
+}
+
+#review {
+  margin-top: 5px;
+}
+
+table.output,
+tr.output,
+td.output {
+  width: 500px;
+  background-color: powderblue;
+  padding: 10px;
+  border-spacing: 5px;
+  border-radius: 25px;
+  color: grey;
+}
+
+td.output {
+  width: 500px;
+  background-color: powderblue;
+  padding: 10px:
+  border-spacing: 5px;
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
