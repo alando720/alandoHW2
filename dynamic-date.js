@@ -123,11 +123,19 @@ function validateUID() {
         document.getElementById("UID").innerHTML = "User ID cannot be blank.";
         return false;
     }
+    //checks if username starts with a number
+    if (!isNaN(uid.charAt(0))) {
+        document.getElementById("uid-error").innerHTML = "Username cannot start with a number.";
+        return false;
+    }
     //verifies that username is only letters, numbers, underscores, or periods.
     let regex = /^[a-zA-Z0-9_.]+$/;
     if (!regex.test(UID)) {
         document.getElementById("uid-error").innerHTML = "User ID can only contain letters, numbers, underscores, and periods.";
         return false;
+    }  else if (uid.length < 5) {
+          document.getElementById("uid-error").innerHTML = "User ID has to be at least 5 characters.;
+          return false;
     }  else if (uid.length > 30) {
           document.getElementById("uid-error").innerHTML = "User ID cannot be longer than 30 characters.
           return false;
