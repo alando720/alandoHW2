@@ -120,7 +120,7 @@ function validateUID() {
     document.getElementById("UID").value = uid;
 
     if (uid.length == 0) {
-        document.getElementById("UID").innerHTML = "User ID cannot be blank.";
+        document.getElementById("uid-error").innerHTML = "User ID cannot be blank.";
         return false;
     }
     //checks if username starts with a number
