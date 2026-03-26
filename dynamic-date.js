@@ -145,6 +145,36 @@ function validateUID() {
     }
 }
 
+//password validation code
+function validatepass() {
+    const pass = document.getElementById("pass").value;
+    const uid = document.getElementById("UID").value;
+    //verifies lower case letters
+    const errorMessage = [];
+    if (!pass.match(/[a-z]/)) {
+        errorMessage.push("Enter at least one lower case letter.");
+    }
+    //verifies upper case letters
+    if (!pass.match(/[A-Z]/)) {
+        errorMessage.push("Enter at least one upper case letter.");
+    //verifies for numbers.
+    if (!pass.match(/[0-9]/)) {
+        errorMessage.push("Enter at least one number.");
+    //verifies for special characters
+    if (!pass.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
+        errorMessage.push("Enter at least one special character.");
+    }
+    //verifies that username is not in password
+    if (pass == uid || pass.includes(uid)) {
+        errorMessage.push("Password cannot contain username.");
+    }
+
+    //displays error messages
+    const errorContainer = document.querySelector(".password-message");
+    errorContainer.innerHTML = errorMessage;
+    .map((message) => `<span>{$message}</span><br/>`)
+    .join("");
+}
 
 
 
