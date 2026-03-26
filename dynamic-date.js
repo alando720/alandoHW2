@@ -177,6 +177,20 @@ function validatepass() {
     .join("");
 }
 
+//confirm password validation code
+function confirmpass() {
+    pass1 = document.getElementById("pass").value;
+    pass2 = document.getElementById("confirm").value;
+
+    if (pass1 != pass2) {
+        document.getElementById("pass-error").innerHTML = "Passwords must match.";
+        return false;
+    } else {
+          document.getElementById("pass-error").innerHTML = "Passwords match.";
+          return true;
+    }
+      
+}
 
 
 
