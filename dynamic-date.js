@@ -173,7 +173,7 @@ function validatepass() {
     //displays error messages
     const errorContainer = document.querySelector(".password-message");
     errorContainer.innerHTML = errorMessage
-    .map((message) => `<span>{$message}</span><br/>`)
+    .map((message) => `<span>${message}</span><br/>`)
     .join("");
 }
 
