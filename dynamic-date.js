@@ -201,21 +201,21 @@ function reviewInput() {
         if (formcontent.elements[i].value != "") {
             datatype = formcontent.elements[i].type;
             switch (datatype) {
-              case "checkbox";
+              case "checkbox":
                 if (formcontent.elements[i].checked) {
                     formoutput = formoutput + "<tr><td align= 'right'>" + formcontent.elements[i].name + "</td>";
                     formoutput = formoutput + "<td class='outputdata'>&#x2713;</td></tr>";
                 }
                 break;
-              case "radio";
+              case "radio":
                 if (formcontent.elements[i].checked) {
                     formoutput = formoutput + "<tr> <td align='right'" + formcontent.elements[i].name + "</td>";
                     formoutput = "<td class='outputdata'>" + formcontent.elements[i].value + "</td></tr>";
                 }
                 break;
-              case "button";
-              case "submit";
-              case "reset";
+              case "button":
+              case "submit":
+              case "reset":
                 break;
               default:
                 formoutput = formoutput + "<tr><td align='right'>" + formcontent.elements[i].name + "</td>";
