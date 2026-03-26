@@ -183,10 +183,10 @@ function confirmpass() {
     pass2 = document.getElementById("confirm").value;
 
     if (pass1 != pass2) {
-        document.getElementById("pass-error").innerHTML = "Passwords must match.";
+        document.getElementById("password2-error").innerHTML = "Passwords must match.";
         return false;
     } else {
-          document.getElementById("pass-error").innerHTML = "Passwords match.";
+          document.getElementById("password2-error").innerHTML = "Passwords match.";
           return true;
     }
       
