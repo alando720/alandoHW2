@@ -210,7 +210,7 @@ function reviewInput() {
               case "radio";
                 if (formcontent.elements[i].checked) {
                     formoutput = formoutput + "<tr> <td align='right'" + formcontent.elements[i].name + "</td>";
-                    formoutput = "<td class='outputdata'>" + formcontent.elements[i].value + "</td></tr>"
+                    formoutput = "<td class='outputdata'>" + formcontent.elements[i].value + "</td></tr>";
                 }
                 break;
               case "button";
@@ -219,7 +219,7 @@ function reviewInput() {
                 break;
               default:
                 formoutput = formoutput + "<tr><td align='right'>" + formcontent.elements[i].name + "</td>";
-                formoutput = formoutput + "<td class='outputdata'>" + formcontent.elements[i].value + "</td></tr>"
+                formoutput = formoutput + "<td class='outputdata'>" + formcontent.elements[i].value + "</td></tr>";
             }
         }
     }
