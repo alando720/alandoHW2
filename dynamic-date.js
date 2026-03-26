@@ -130,7 +130,7 @@ function validateUID() {
     }
     //verifies that username is only letters, numbers, underscores, or periods.
     let regex = /^[a-zA-Z0-9_.]+$/;
-    if (!regex.test(UID)) {
+    if (!regex.test(uid)) {
         document.getElementById("uid-error").innerHTML = "User ID can only contain letters, numbers, underscores, and periods.";
         return false;
     }  else if (uid.length < 5) {
